@@ -5,16 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.ktx.R
 import pe.edu.idat.appgrupo2.databinding.FragmentHomeBinding
 
-class HomeFragment : Fragment() {
 
+
+class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -22,15 +24,24 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+        val binding = FragmentHomeBinding.inflate(inflater, container, false)
+        val root = binding.root
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        val editTextUsername = binding.editTextUsername
+        val editTextPassword = binding.editTextPassword
+        val buttonLogin = binding.buttonLogin
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        buttonLogin.setOnClickListener{
+            val username = editTextUsername.text.toString()
+            val password = editTextPassword.text.toString()
+
+            if (username == "grupo2" && password == "SYS123"){
+                Toast.makeText(requireContext(), "Usuario y contraseña correctos", Toast.LENGTH_SHORT).show()
+                findNavController().navigate(pe.edu.idat.appgrupo2.R.id.nav_gallery)
+            }
+            else{
+                Toast.makeText(requireContext(), "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
+            }
         }
         return root
     }
