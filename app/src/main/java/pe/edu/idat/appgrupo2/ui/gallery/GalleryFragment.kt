@@ -29,7 +29,7 @@ class GalleryFragment : Fragment() {
         _binding = FragmentGalleryBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        // Obtener el contexto de requireContext() o requireActivity()
+
         ArrayAdapter.createFromResource(requireContext(), R.array.dias, android.R.layout.simple_spinner_item).also { adapter ->
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             binding.spdia.adapter = adapter
@@ -58,9 +58,8 @@ class GalleryFragment : Fragment() {
         val month = calendar.get(Calendar.MONTH)
         val dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH)
 
-        // Crear y mostrar el DatePickerDialog
+
         val datePickerDialog = DatePickerDialog(requireContext(), { _: DatePicker, year: Int, month: Int, dayOfMonth: Int ->
-            // Actualizar el texto del EditText con la fecha seleccionada
             val fechaSeleccionada = "$dayOfMonth/$month/$year"
             binding.tvFecha.setText(fechaSeleccionada)
         }, year, month, dayOfMonth)
