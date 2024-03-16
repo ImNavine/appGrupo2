@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="PaseoPerros">
+    <string-array name="dias">
         <item>Dias de Paseo</item>
         <item>Lunes</item>
         <item>Martes</item>
