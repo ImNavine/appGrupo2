@@ -27,6 +27,7 @@ class AdapterResena ( val listaResena: List<Resena>, val context: Context)
                 binding.tvdescripcion.text=descripcion
                 binding.tvfecha.text=fecha
                 binding.ivusuario.setImageResource(img)
+                binding.ivstar.setImageResource(star)
                 binding.cvresena.setOnClickListener(View.OnClickListener {
                     Toast.makeText(context, "Click Item Resena $nombre", Toast.LENGTH_LONG).show()
                 })

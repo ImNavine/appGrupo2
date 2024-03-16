@@ -26,13 +26,13 @@ class ListadoFragment : Fragment() {
     fun listaResena(): List<Resena> {
     var lista=ArrayList<Resena>()
         lista.add(Resena("Kevin", "Prueba de descripcion",
-            "16/03/2024", R.drawable.user1))
+            "16/03/2024", R.drawable.user1, R.drawable.star1))
         lista.add(Resena("Kevin", "Prueba de descripcion",
-            "16/03/2024", R.drawable.user2))
+            "16/03/2024", R.drawable.user2, R.drawable.star2))
         lista.add(Resena("Kevin", "Prueba de descripcion",
-            "16/03/2024", R.drawable.user3))
+            "16/03/2024", R.drawable.user3, R.drawable.star1))
         lista.add(Resena("Kevin", "Prueba de descripcion",
-            "16/03/2024", R.drawable.user4))
+            "16/03/2024", R.drawable.user4, R.drawable.star1))
         return lista
     }
 
