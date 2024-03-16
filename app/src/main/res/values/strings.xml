@@ -10,4 +10,17 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="tvNombre">Dan</string>
+    <string name="tvInfo">Miraflores - Lima - Peru\nConectados Ahora</string>
+    <string name="tvSobredan">Sobre DAN</string>
+    <string name="tvDetalles">Dan es un golden retriever con grandes\nhabilidades de conexion tanto en \npersonas como otros canes</string>
+    <string name="tvDetalles2">Dan es un golden retriever con grandes capacidades de conexion tanto en personas como en otros canes</string>
+    <string name="tvDueño">Dueño</string>
+    <string name="tvNombrehumano">Jose Alberto Solarzano Nuñez</string>
+    <string name="tvFacebook">Facebook</string>
+    <string name="tvDirecface">www.facebook.com/jmegas</string>
+    <string name="ptTitu">CONFIRMA TU RESERVA</string>
+    <string name="idcalendario">Fecha de Reserva</string>
+    <string name="ptFecha" />
+    <string name="btFecha">Fecha</string>
 </resources>
