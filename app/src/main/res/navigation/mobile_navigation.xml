@@ -7,6 +7,6 @@
     <fragment
         android:id="@+id/listadoFragment"
         android:name="pe.edu.idat.appgrupo2.ListadoFragment"
-        android:label="fragment_listado"
+        android:label="@string/menu_listado"
         tools:layout="@layout/fragment_listado" />
 </navigation>
