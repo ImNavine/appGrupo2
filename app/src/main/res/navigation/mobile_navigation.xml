@@ -2,11 +2,4 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation"
-    app:startDestination="@id/listadoFragment">
-    <fragment
-        android:id="@+id/listadoFragment"
-        android:name="pe.edu.idat.appgrupo2.ListadoFragment"
-        android:label="@string/menu_listado"
-        tools:layout="@layout/fragment_listado" />
-</navigation>
+    android:id="@+id/mobile_navigation" />
