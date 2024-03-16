@@ -31,13 +31,13 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_gallery, R.id.nav_slideshow
+                R.id.listadoFragment ,R.id.homeFragment
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
         navController.addOnDestinationChangedListener{ controller, destination, _ ->
-            if (destination.id == R.id.nav_home) {
+            if (destination.id == R.id.homeFragment) {
                 supportActionBar?.hide()
             } else {
                 supportActionBar?.show()

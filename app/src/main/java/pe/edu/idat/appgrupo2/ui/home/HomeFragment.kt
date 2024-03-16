@@ -37,7 +37,7 @@ class HomeFragment : Fragment() {
 
             if (username == "grupo2" && password == "SYS123"){
                 Toast.makeText(requireContext(), "Usuario y contraseña correctos", Toast.LENGTH_SHORT).show()
-                findNavController().navigate(pe.edu.idat.appgrupo2.R.id.nav_gallery)
+                findNavController().navigate(pe.edu.idat.appgrupo2.R.id.listadoFragment)
             }
             else{
                 Toast.makeText(requireContext(), "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
