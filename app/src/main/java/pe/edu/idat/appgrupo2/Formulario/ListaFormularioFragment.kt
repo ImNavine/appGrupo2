@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import androidx.navigation.fragment.findNavController
+import pe.edu.idat.appgrupo2.R
 import pe.edu.idat.appgrupo2.databinding.FragmentListaFormularioBinding
 
 class ListaFormularioFragment : Fragment() {
@@ -22,8 +24,15 @@ class ListaFormularioFragment : Fragment() {
         val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, listaFormularios)
         binding.lvformularios.adapter = adapter
 
+        binding.btnvolver.setOnClickListener {
+            findNavController().navigate(R.id.formularioFragment)
+        }
+
         return binding.root
+
+
     }
+
 
 
 }

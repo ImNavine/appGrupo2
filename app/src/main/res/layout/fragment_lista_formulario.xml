@@ -22,8 +22,8 @@
 
         <ListView
             android:id="@+id/lvformularios"
-            android:layout_width="327dp"
-            android:layout_height="608dp"
+            android:layout_width="332dp"
+            android:layout_height="574dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
@@ -31,5 +31,16 @@
             app:layout_constraintHorizontal_bias="0.485"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <Button
+            android:id="@+id/btnvolver"
+            android:layout_width="169dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="20dp"
+            android:text="REGRESAR"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lvformularios" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
