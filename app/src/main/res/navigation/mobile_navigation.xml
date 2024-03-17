@@ -13,6 +13,16 @@
         android:name="pe.edu.idat.appgrupo2.ListadoFragment"
         android:label="@string/menu_listado"
         tools:layout="@layout/fragment_listado" />
+    <fragment
+        android:id="@+id/formularioFragment"
+        android:name="pe.edu.idat.appgrupo2.Formulario.FormularioFragment"
+        android:label="fragment_formulario"
+        tools:layout="@layout/fragment_formulario" />
+    <fragment
+        android:id="@+id/listaFormularioFragment"
+        android:name="pe.edu.idat.appgrupo2.Formulario.ListaFormularioFragment"
+        android:label="fragment_lista_formulario"
+        tools:layout="@layout/fragment_lista_formulario" />
 </navigation>
 
 
