@@ -45,13 +45,18 @@ class FormularioFragment : Fragment(), AdapterView.OnItemSelectedListener, View.
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-        razonreserva=if(position>0){
-            parent!!.getItemAtPosition(position).toString()
-        }else ""
-
-        cantidad=if (position>0){
-            parent!!.getItemAtPosition(position).toString()
-        }else ""
+        when (parent?.id) {
+            R.id.sprazonreserva -> {
+                razonreserva = if (position > 0) {
+                    parent.getItemAtPosition(position).toString()
+                } else ""
+            }
+            R.id.spcantidad -> {
+                cantidad = if (position > 0) {
+                    parent.getItemAtPosition(position).toString()
+                } else ""
+            }
+        }
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -104,13 +109,13 @@ class FormularioFragment : Fragment(), AdapterView.OnItemSelectedListener, View.
     fun validarFormulario():Boolean{
         var respuesta=false
         if(!validarRazonReserva()){
-            Toast.makeText(context, "Seleccione un motivo", Toast.LENGTH_LONG)
+            Toast.makeText(requireContext(), "Seleccione un motivo", Toast.LENGTH_LONG).show()
         } else if(!validarCantidad()){
-            Toast.makeText(context, "Seleccione una cantidad", Toast.LENGTH_LONG)
+            Toast.makeText(requireContext(), "Seleccione una cantidad", Toast.LENGTH_LONG).show()
         } else if (!validarFechaInicio()){
-            Toast.makeText(context, "Ingrese una fecha de inicio", Toast.LENGTH_LONG)
+            Toast.makeText(requireContext(), "Ingrese una fecha de inicio", Toast.LENGTH_LONG).show()
         } else if(!validarFechaFinal()){
-            Toast.makeText(context, "Ingrese una fecha final", Toast.LENGTH_LONG)
+            Toast.makeText(requireContext(), "Ingrese una fecha final", Toast.LENGTH_LONG).show()
         }else respuesta=true
         return respuesta
     }
@@ -126,7 +131,7 @@ class FormularioFragment : Fragment(), AdapterView.OnItemSelectedListener, View.
             val infoFormulario= razonreserva+ " "+ cantidad+" "+
                     binding.etfechainicio.text.toString()+" "+binding.etfechafinal.text.toString()
             listaFormularios.add(infoFormulario)
-            Toast.makeText(context, "Registro exitoso", Toast.LENGTH_LONG)
+            Toast.makeText(requireContext(), "Registro exitoso", Toast.LENGTH_LONG).show()
             setearControles()
         }
     }
