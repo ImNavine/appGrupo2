@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="razon_reserva">
+        <item>Seleccione tratamiento</item>
+        <item>Baño</item>
+        <item>Despulgar</item>
+        <item>Esterilización</item>
+        <item>Operacion</item>
+    </string-array>
+</resources>
